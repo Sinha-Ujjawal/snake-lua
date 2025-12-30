@@ -19,7 +19,9 @@ end
 ---@param yhigh number highest possible y value
 ---@return Vector2 vec random vector sampled from [xlow .. xhigh] and [ylow .. yhigh]
 function vector2.random(xlow, xhigh, ylow, yhigh)
-	return { x = math.random(xlow, xhigh), y = math.random(ylow, yhigh) }
+	local x = xlow + math.random() * (xhigh - xlow)
+	local y = ylow + math.random() * (yhigh - ylow)
+	return { x = x, y = y }
 end
 
 ---Return clone of 2d vector
