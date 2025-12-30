@@ -2,7 +2,7 @@ local direction = {}
 
 ---@alias Direction fun(mag: number):Vector2
 
-local vector2 = require("./Vector2")
+local vector2 = require("./vector2")
 
 ---Return a new Vector2 in North (^) direction with a particular Magnitude
 ---@param mag number
