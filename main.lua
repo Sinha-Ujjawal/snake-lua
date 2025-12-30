@@ -54,7 +54,6 @@ function love.update(dt)
 	else
 		for i, bb in ipairs(snake.tailBboxes(gameState.snake)) do
 			if bbox.checkCollision(snakeBbox, bb) then
-				love.graphics.print("Hit " .. i, 10, 10)
 				gameState.snake.body = tableUtils.islice(gameState.snake.body, i)
 				break
 			end
